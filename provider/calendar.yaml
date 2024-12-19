@@ -1,0 +1,20 @@
+identity:
+  author: crazywoola
+  name: calendar
+  label:
+    en_US: Calendar
+    zh_Hans: 日历
+    ja_JP: カレンダー
+  description:
+    en_US: TEST
+    zh_Hans: 测试
+    ja_JP: テスト
+  icon: icon.svg
+  tags:
+    - business
+    - utilities
+tools:
+  - tools/calendar.yaml
+extra:
+  python:
+    source: provider/calendar.py

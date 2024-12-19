@@ -1,0 +1,5 @@
+path: "/ics/<calendar_id>"
+method: "GET"
+extra:
+  python:
+    source: "endpoints/calendar.py"

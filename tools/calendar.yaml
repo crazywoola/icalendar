@@ -1,0 +1,92 @@
+identity:
+  name: ics_generator
+  author: crazywoola
+  label:
+    en_US: Get .ics file
+    zh_Hans: 获取 .ics 文件
+description:
+  human:
+    en_US: Generate .ics file
+    zh_Hans: 生成 .ics 文件
+  llm: calendar
+parameters:
+  - name: dtstart
+    type: string
+    required: true
+    label:
+      en_US: DTSTART
+      zh_Hans: 事件的开始时间
+    human_description:
+      en_US: Event start time
+      zh_Hans: 事件的开始时间
+    llm_description: DTSTART
+    form: llm
+  - name: dtend
+    type: string
+    required: true
+    label:
+      en_US: DTEND
+      zh_Hans: 事件的结束时间
+    human_description:
+      en_US: Event end time
+      zh_Hans: 事件的结束时间
+    llm_description: DTEND
+    form: llm
+  - name: summary
+    type: string
+    required: true
+    label:
+      en_US: SUMMARY
+      zh_Hans: 事件标题
+    human_description:
+      en_US: Event summary
+      zh_Hans: 事件标题
+    llm_description: SUMMARY
+    form: llm
+  - name: description
+    type: string
+    required: false
+    label:
+      en_US: DESCRIPTION
+      zh_Hans: 事件的详细说明
+    human_description:
+      en_US: Event description
+      zh_Hans: 事件的详细说明
+    llm_description: DESCRIPTION
+    form: llm
+  - name: location
+    type: string
+    required: false
+    label:
+      en_US: LOCATION
+      zh_Hans: 事件地点
+    human_description:
+      en_US: Event location
+      zh_Hans: 事件地点
+    llm_description: LOCATION
+    form: llm
+  - name: rrule
+    type: string
+    required: false
+    label:
+      en_US: RRULE
+      zh_Hans: 重复规则
+    human_description:
+      en_US: Repeat rule (e.g. FREQ=DAILY;INTERVAL=1 means repeat every day)
+      zh_Hans: 重复规则（如 FREQ=DAILY;INTERVAL=1 表示每天重复一次）。
+    llm_description: RRULE
+    form: llm
+  - name: attendee
+    type: string
+    required: false
+    label:
+      en_US: ATTENDEE
+      zh_Hans: 参与者的电子邮件
+    human_description:
+      en_US: Attendee's email
+      zh_Hans: 参与者的电子邮件
+    llm_description: ATTENDEE
+    form: llm
+extra:
+  python:
+    source: tools/calendar.py
