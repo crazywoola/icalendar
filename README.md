@@ -6,15 +6,26 @@
 
 ### Description
 
-UID：事件的唯一标识符。
-DTSTAMP：事件的创建或最后修改时间。
-DTSTART 和 DTEND：事件的开始和结束时间。
-SUMMARY：事件标题。
-DESCRIPTION：事件的详细说明。
-LOCATION：事件地点。
-RRULE：重复规则（如 FREQ=DAILY;INTERVAL=1 表示每天重复一次）。
-ATTENDEE：参与者的电子邮件。
+This extension allows the user to interact with their Google Calendar. 
 
-# calendar_id = self.session.storage.get("calendar_id").decode('utf-8')
-# self.session.storage.set("calendar_id", "123").encode('utf-8')
+### ICS Format
+
+```
+UID: The unique identifier for the event.
+DTSTAMP: The timestamp of when the event was created or last modified.
+DTSTART and DTEND: The start and end times of the event.
+SUMMARY: The title of the event.
+DESCRIPTION: A detailed description of the event.
+LOCATION: The location of the event.
+RRULE: The recurrence rule (e.g., FREQ=DAILY;INTERVAL=1 means the event repeats daily).
+ATTENDEE: The email addresses of the participants.
+```
+
+How to save the things in the storage:
+
+```python
+# Example usage:
+calendar_id = self.session.storage.get("calendar_id").decode('utf-8')
+self.session.storage.set("calendar_id", "123").encode('utf-8')
+```
 
