@@ -42,6 +42,7 @@ DESCRIPTION:{description}
 LOCATION:{location}
 RRULE:{rrule}
 ATTENDEE:{attendees}
+STATUS:CONFIRMED
 END:VEVENT
 END:VCALENDAR"""
         self.session.storage.set(uid, ics_content.encode("utf-8"))
