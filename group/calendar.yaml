@@ -1,3 +1,4 @@
 settings: []
 endpoints:
-  - endpoints/calendar.yaml
+  - endpoints/ics.yaml
+  - endpoints/list.yaml

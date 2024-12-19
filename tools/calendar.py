@@ -46,6 +46,14 @@ STATUS:CONFIRMED
 END:VEVENT
 END:VCALENDAR"""
         self.session.storage.set(uid, ics_content.encode("utf-8"))
+
+        # Add uid to list
+        try:
+            list = self.session.storage.get('list').decode("utf-8").split('|')
+        except:
+            list = []
+        list.append(uid)
+        self.session.storage.set('list', "|".join(list).encode("utf-8"))
         yield self.create_json_message({
             "result": {
                 "uid": uid,

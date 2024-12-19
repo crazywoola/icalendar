@@ -1,10 +1,8 @@
-import time
 from typing import Mapping
 from werkzeug import Request, Response
 from dify_plugin import Endpoint
 
-
-class CalendarEndpoint(Endpoint):
+class IcsEndpoint(Endpoint):
     def _invoke(self, r: Request, values: Mapping, settings: Mapping) -> Response:
         """
         Invokes the endpoint with the given request.

@@ -1,0 +1,5 @@
+path: "/list"
+method: "GET"
+extra:
+  python:
+    source: "endpoints/list.py"
