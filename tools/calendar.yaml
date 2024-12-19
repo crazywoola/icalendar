@@ -19,18 +19,18 @@ parameters:
     human_description:
       en_US: Event start time
       zh_Hans: 事件的开始时间
-    llm_description: DTSTART
+    llm_description: DTSTART Should be in the format of "YYYYMMDDTHHMMSSZ"
     form: llm
   - name: dtend
     type: string
-    required: true
+    required: false
     label:
       en_US: DTEND
       zh_Hans: 事件的结束时间
     human_description:
       en_US: Event end time
       zh_Hans: 事件的结束时间
-    llm_description: DTEND
+    llm_description: DTEND Should be in the format of "YYYYMMDDTHHMMSSZ"
     form: llm
   - name: summary
     type: string
@@ -41,7 +41,7 @@ parameters:
     human_description:
       en_US: Event summary
       zh_Hans: 事件标题
-    llm_description: SUMMARY
+    llm_description: SUMMARY Should be a string
     form: llm
   - name: description
     type: string
@@ -52,7 +52,7 @@ parameters:
     human_description:
       en_US: Event description
       zh_Hans: 事件的详细说明
-    llm_description: DESCRIPTION
+    llm_description: DESCRIPTION Should be a string
     form: llm
   - name: location
     type: string
@@ -63,7 +63,7 @@ parameters:
     human_description:
       en_US: Event location
       zh_Hans: 事件地点
-    llm_description: LOCATION
+    llm_description: LOCATION Should be a string
     form: llm
   - name: rrule
     type: string
@@ -74,7 +74,7 @@ parameters:
     human_description:
       en_US: Repeat rule (e.g. FREQ=DAILY;INTERVAL=1 means repeat every day)
       zh_Hans: 重复规则（如 FREQ=DAILY;INTERVAL=1 表示每天重复一次）。
-    llm_description: RRULE
+    llm_description: RRULE Should be FREQ=DAILY;INTERVAL=1 or similar
     form: llm
   - name: attendee
     type: string
@@ -85,7 +85,7 @@ parameters:
     human_description:
       en_US: Attendee's email
       zh_Hans: 参与者的电子邮件
-    llm_description: ATTENDEE
+    llm_description: ATTENDEE Should be an email address
     form: llm
 extra:
   python:
